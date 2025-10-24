@@ -1,0 +1,13 @@
+  {
+  "name": "apify-email-scraper",
+  "version": "1.0.0",
+  "description": "Scraper LinkedIn/Twitter pour extraire emails",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "apify": "^2.3.0",
+    "node-fetch": "^2.6.7"
+  }
+}

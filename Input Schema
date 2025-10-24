@@ -1,0 +1,33 @@
+{
+  "title": "Actor Email Enricher Input",
+  "type": "object",
+  "properties": {
+    "profiles": {
+      "title": "List of Profile URLs",
+      "type": "array",
+      "description": "Enter LinkedIn or Twitter profile URLs to scrape.",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "emailProvider": {
+      "title": "Email enrichment provider",
+      "type": "string",
+      "description": "Choose provider to enrich or verify emails",
+      "enum": ["none", "hunter", "clearbit", "snovio"],
+      "default": "none"
+    },
+    "verifyEmails": {
+      "title": "Verify generated emails?",
+      "type": "boolean",
+      "default": false
+    },
+    "maxConcurrency": {
+      "title": "Max concurrency",
+      "type": "number",
+      "default": 2
+    }
+  },
+  "required": ["profiles"]
+}
